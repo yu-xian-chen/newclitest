@@ -21,3 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+
+git push -f https://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@github.com/yu-xian-chen/newclitest.git master:gh-pages

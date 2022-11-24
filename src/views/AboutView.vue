@@ -1,19 +1,38 @@
+<style scoped>
+    .time{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .content{
+        padding-left: 5px;
+    }
+</style>
 <template>
-    <Images link="https://picsum.photos/id/200/600/400"/>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <Button type="error">Error111</Button>
-  </div>
+    <Timeline>
+        <TimelineItem>
+            <p class="time">1976年</p>
+            <p class="content">Apple I 问世</p>
+        </TimelineItem>
+        <TimelineItem>
+            <p class="time">1984年</p>
+            <p class="content">发布 Macintosh</p>
+        </TimelineItem>
+        <TimelineItem>
+            <p class="time">2007年</p>
+            <p class="content">发布 iPhone</p>
+        </TimelineItem>
+        <TimelineItem>
+            <p class="time">2010年</p>
+            <p class="content">发布 iPad</p>
+        </TimelineItem>
+        <TimelineItem>
+            <p class="time">2011年10月5日</p>
+            <p class="content">史蒂夫·乔布斯去世</p>
+        </TimelineItem>
+    </Timeline>
 </template>
-
 <script>
-// @ is an alias to /src
-import Images from '@/components/Images.vue'
-
-export default {
-  name: 'AboutView',
-  components: {
-    Images
-  }
-}
+    export default {
+        
+    }
 </script>

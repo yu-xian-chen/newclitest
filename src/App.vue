@@ -7,6 +7,8 @@
       <router-link to="/new">new</router-link> |
       <router-link to="/product">Product</router-link> |
       <router-link to="/booking">Booking</router-link> |
+      <router-link to="/projectNews">projectNews</router-link> |
+      <router-link to="/projectNewsDes">projectNewsDes</router-link> |
     </nav>
   </header>
   <router-view/>

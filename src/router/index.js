@@ -29,6 +29,16 @@ const routes = [
     path: '/booking',
     name: 'booking',
     component: () => import('../views/BookingView.vue')
+  },
+  {
+    path: '/projectNew',
+    name: 'projectNew',
+    component: () => import('../views/ProjectNewsView.vue')
+  },
+  {
+    path: '/projectNewDes',
+    name: 'projectNewDes',
+    component: () => import('../views/ProjectNewsDesView.vue')
   }
 ]
 
