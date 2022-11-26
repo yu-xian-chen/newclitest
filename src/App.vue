@@ -1,14 +1,15 @@
 <template>
   <header>
-    header
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/new">new</router-link> |
       <router-link to="/product">Product</router-link> |
       <router-link to="/booking">Booking</router-link> |
-      <router-link to="/projectNews">projectNews</router-link> |
-      <router-link to="/projectNewsDes">projectNewsDes</router-link> |
+      <router-link to="/news">專題消息列表</router-link> |
+      <router-link to="/article">專題消息內文</router-link> |
+      <router-link to="/back">專題後台</router-link> |
+      <router-link to="/hello">專題footer&banner</router-link> |
     </nav>
   </header>
   <router-view/>
@@ -30,7 +31,7 @@ header{
 }
 footer{
   background-color: #333;
-  height: 10rem;
+  height: 5rem;
   color: aquamarine;
 }
 

@@ -31,14 +31,24 @@ const routes = [
     component: () => import('../views/BookingView.vue')
   },
   {
-    path: '/projectNew',
-    name: 'projectNew',
-    component: () => import('../views/ProjectNewsView.vue')
+    path: '/news',
+    name: 'news',
+    component: () => import('../views/NewsView.vue')
   },
   {
-    path: '/projectNewDes',
-    name: 'projectNewDes',
-    component: () => import('../views/ProjectNewsDesView.vue')
+    path: '/article',
+    name: 'article',
+    component: () => import('../views/ArticleView.vue')
+  },
+  {
+    path: '/back',
+    name: 'back',
+    component: () => import('../views/BackView.vue')
+  },
+  {
+    path: '/hello',
+    name: 'hello',
+    component: () => import('../views/HelloView.vue')
   }
 ]
 

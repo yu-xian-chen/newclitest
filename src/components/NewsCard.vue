@@ -1,6 +1,7 @@
 <template>
   <div class="news-card-img">
     <img :src="link" alt="">
+    <img src="../assets/project_img/yubu.jpg" alt="">
   </div>
   <div class="news-card-txt">
     <p class="news-date">
@@ -9,7 +10,9 @@
     </p>
     <h3 class="news-title">{{title}}</h3>
     <p class="news-des">{{des}}</p>
-    <a href="#" class="news-btn-more">more</a>
+    <div class="news-btn">
+      <a href="#" class="news-btn-more">more</a>
+    </div>
   </div>
 </template>
 
@@ -28,6 +31,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="css">
+/* 圖片 */
+.news-card-img{
+  width: 50%;
+  margin: auto;
+}
+.news-card-img img{
+  width: 100%;
+}
+
 .news-date{
   font-size: 14px;
   margin-bottom: 20px;
@@ -50,12 +62,17 @@ export default {
   margin-bottom: 60px;
 
 }
-
+/* 按鈕 */
+.news-btn{
+  width: fit-content;
+  margin: auto;
+}
 .news-btn-more{
   font-size: 20px;
   color: #888888;
   display: inline-block;
   padding-bottom: 5px;
+  position: relative;
 
 }
 
