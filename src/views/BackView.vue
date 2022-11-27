@@ -5,7 +5,7 @@
 /* 側邊欄 */
 .nav-aside{
     width: 18%;
-    height: 80vh;
+    /* height: 80vh; */
     background-color: #2D3740;
     
 }
@@ -119,16 +119,17 @@
                     <button>新增消息</button>
                 </div>
                 <div class="news-manage">
-                    <Tabs type="card" @on-contextmenu="handleContextMenu">
-                        <TabPane label="上架" name="tab1" context-menu>上架</TabPane>
-                        <TabPane label="草稿" name="tab2" context-menu>草稿</TabPane>
-                        <TabPane label="下架" name="tab3" context-menu>下架</TabPane>
-                        <template #contextMenu>
-                            <DropdownItem @click="handleContextMenuEdit">编辑</DropdownItem>
-                            <DropdownItem @click="handleContextMenuDelete" style="color: #ed4014">删除</DropdownItem>
-                        </template>
+                    <Tabs type="card" :animated="false">
+                        <TabPane label="上架" >
+                            <Table border :columns="columns" :data="dataOn" ></Table>
+                        </TabPane>
+                        <TabPane label="草稿" >
+                            <Table border :columns="columns" :data="dataDraft" ></Table>
+                        </TabPane>
+                        <TabPane label="下架" >
+                            <Table border :columns="columns" :data="dataOff" ></Table>
+                        </TabPane>
                     </Tabs>
-                    <Table border :columns="columns" :data="data"></Table>
                 </div>
                 <div class="btn-bottom">
                     <button>上一頁</button>
@@ -140,6 +141,9 @@
 
 
 </template>
+<!-- tab -->
+
+
 <script>
     export default {
         data () {
@@ -170,7 +174,7 @@
                         key: 'news_action'
                     }
                 ],
-                data: [
+                dataOn: [
                     {
                         news_no: 'A1100000',
                         news_time: '2022/11/22',
@@ -210,10 +214,43 @@
                         news_title: '商城新品上市!!',
                         news_status:'上架',
                         news_action:'新增 刪除'
+                    }
+                ],
+                dataDraft: [
+                    {
+                        news_no: 'A1100005',
+                        news_time: '2022/11/23',
+                        news_class: '其他',
+                        news_title: '高千穗-夜神樂',
+                        news_status:'草稿',
+                        news_action:'新增 刪除'
                     },
-
-
- 
+                    {
+                        news_no: 'A1100006',
+                        news_time: '2022/11/24',
+                        news_class: '活動',
+                        news_title: '列車停駛',
+                        news_status:'草稿',
+                        news_action:'新增 刪除'
+                    }
+                ],
+                dataOff: [
+                    {
+                        news_no: 'A1100007',
+                        news_time: '2022/11/25',
+                        news_class: '其他',
+                        news_title: '「鹿兒島沙浴」體驗活動報名',
+                        news_status:'下架',
+                        news_action:'新增 刪除'
+                    },
+                    {
+                        news_no: 'A1100008',
+                        news_time: '2022/11/26',
+                        news_class: '活動',
+                        news_title: '商城新品上市!!',
+                        news_status:'下架',
+                        news_action:'新增 刪除'
+                    }
                 ]
             }
         }

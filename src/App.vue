@@ -10,6 +10,7 @@
       <router-link to="/article">專題消息內文</router-link> |
       <router-link to="/back">專題後台</router-link> |
       <router-link to="/hello">專題footer&banner</router-link> |
+      <router-link to="/test">Test Area</router-link> |
     </nav>
   </header>
   <router-view/>
