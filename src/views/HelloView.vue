@@ -19,8 +19,9 @@
 
     <NewsTable></NewsTable>
 
-
+  
     <Footer></Footer>
+
 
 
 
@@ -36,7 +37,7 @@
         components:{
             Banner,
             Footer,
-            NewsTable
+            NewsTable,
         }
     }
 

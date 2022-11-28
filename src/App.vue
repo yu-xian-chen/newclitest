@@ -11,9 +11,14 @@
       <router-link to="/back">專題後台</router-link> |
       <router-link to="/hello">專題footer&banner</router-link> |
       <router-link to="/test">Test Area</router-link> |
+      <router-link to="/testtwo">Test Area2</router-link> |
     </nav>
   </header>
   <router-view/>
+
+  <span></span>
+  
+
   <footer>Footer</footer>
 </template>
 

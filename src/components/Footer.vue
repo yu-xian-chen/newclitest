@@ -7,47 +7,55 @@
       <div class="footer-content">
         <ul class="footer-pages">
           <li class="desktop">
-            <a href="#">預約行程</a>
-            <p class="link-note">Booking</p>
+            <a href="#" class="font-24">預約行程</a>
+            <p class="link-note font-20">Booking</p>
           </li>
           <li class="desktop">
-            <a href="#">消息專區</a>
-            <p class="link-note">News</p>
+            <a href="#" class="font-24">消息專區</a>
+            <p class="link-note font-20">News</p>
           </li>
           <li class="desktop">
-            <a href="#">線上商城</a>
-            <p class="link-note">Online Shop</p>
+            <a href="#" class="font-24">線上商城</a>
+            <p class="link-note font-20">Online Shop</p>
           </li>
           <li>
-            <a href="#">關於我們</a>
-            <p class="link-note">About</p>
+            <a href="#" class="font-24">關於我們</a>
+            <p class="link-note font-20">About</p>
           </li>
           <li>
-            <a href="#">聯絡我們</a>
-            <p class="link-note">Contact</p>
+            <a href="#" class="font-24">聯絡我們</a>
+            <p class="link-note font-20">Contact</p>
           </li>
           <li>
-            <a href="#">常見問題</a>
-            <p class="link-note">Q&A</p>
+            <a href="#" class="font-24">常見問題</a>
+            <p class="link-note font-20">Q&A</p>
           </li>
         </ul>
         <div class="footer-follow">
           <p class="follow-title">FOLLOW US</p>
           <div class="footer-icon-box">
-            <div class="icon">1</div>
-            <div class="icon">2</div>
-            <div class="icon">3</div>
-            <div class="icon">4</div>
+            <div class="icon">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="icon">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="icon">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="icon">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
           </div>
-          <p class="copyright">COPYRIGHT © 2022 JET SPEED</p>
+          <p class="copyright font-16-24em">COPYRIGHT © 2022 JET SPEED</p>
         </div>
-        <div class="footer-contact">
+        <div class="footer-contact font-16-24em">
           <p class="address-code">〒812-0011</p>
           <p class="address">日本福岡市博多區博多車站中央街1番1號</p>
           <p class="mail">fakename＠mail.com</p>
         </div>
       </div>
-      <div class="footer-tibame">
+      <div class="footer-tibame font-16-24em">
         <p>本網站為緯育 TibaMe 前端工程師班第 79 期學員專題作品，僅供學習、展示之用。若有侵權疑慮，您可以私訊「TibaMe-前端設計工程師養成班」，後續會由專人協助處理。</p>
       </div>
     </div>
@@ -64,9 +72,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="css">
+<style scoped lang="scss">
+@import "../assets/sass/font.scss";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+
 .footer-bg{
-  background-image: url(../assets/project_img/footer_bg.png);
+  background-image: url(../assets/project_img/footer_bg.webp);
 }
 .container{
   max-width: 1200px;
@@ -101,28 +112,35 @@ export default {
 .footer-pages li:nth-child(4){
   border-left: none ;
 }
-a{
+.footer-pages a{
   direction: none;
   color: #fff;
   writing-mode: vertical-lr;
-  font-size: 24px;
+  /* font-size: 24px; */ 
   text-align: start;
-  letter-spacing : 0.45rem;
+  letter-spacing : 1.45rem; 
 }
 .footer-pages p{
   color: #BC955C;
   writing-mode: vertical-lr;
-  font-size: 20px;
+  /* font-size: 20px; */
   text-align: start;
-  letter-spacing : 0.1rem;
+  margin-left: 0.5em;
+  /* letter-spacing : 0.1rem; */
 }
 /*Follow*/
+.footer-follow{
+  width: 50%;
+  margin: auto;
+}
+
 .footer-follow p{
   color: #fff;
 }
 .follow-title{
-  font-size: 31px;
-  letter-spacing : 0.1rem;
+  font-size: 32px;
+  letter-spacing : 0.3rem;
+  font-family: 'Noto Serif TC', '微軟正黑體'; 
 
 }
 .footer-icon-box{
@@ -132,12 +150,16 @@ a{
 .icon{
   width: 40px;
   height: 40px;
-  background-color: rgb(192, 147, 147);
   margin: 30px 10px;
+}
+.fa-brands{
+  font-size: 30px;
+  color: #fff;
 }
 
 .copyright{
-  font-size: 16px;
+  /* font-size: 16px; */
+  text-align: center;
   letter-spacing : 0.1rem;
 
 }
@@ -146,8 +168,9 @@ a{
 .footer-contact{
   color: #fff;
   letter-spacing : 0.1rem;
-  font-size: 16px;
+  /* font-size: 16px; */
   margin-top: 40px;
+  text-align: center;
 }
 .mail{
   margin-top: 10px;
@@ -157,7 +180,7 @@ a{
 }
 
 .footer-tibame{
-  font-size: 16px;
+  /* font-size: 16px; */
   opacity: 0.5;
   color: #fff;
   letter-spacing : 0.1rem;
@@ -169,6 +192,7 @@ a{
 @media screen and (max-width:767px){
   .footer-bg{height: 990px;}
   .footer-content .footer-pages .desktop{display: none;}
+
 }
 @media screen and (min-width: 768px){
   
@@ -178,11 +202,24 @@ a{
   .footer-pages li:nth-child(4){
     border-left: 1px solid rgb(255, 255, 255) ;
   }
+
+  .footer-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-pages{width: 80%;}
+
+  .footer-follow,
+  .footer-contact{
+    width: 40%;
+  }
 }  
 @media screen and (min-width: 1024px){
-  
   .footer-bg{height: 670px;}
 }
+
+
 @media screen and (min-width: 1200px){
 
 }
