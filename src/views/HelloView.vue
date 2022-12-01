@@ -12,9 +12,7 @@
         尚未完成:
         banner
         footer:
-        字體引用、
-        icon
-        FOLLOW之後的排版(flex各斷點排序)
+
     </pre>
 
     <NewsTable></NewsTable>

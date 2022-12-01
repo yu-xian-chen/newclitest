@@ -113,7 +113,7 @@ export default {
   border-left: none ;
 }
 .footer-pages a{
-  direction: none;
+  text-decoration: none;
   color: #fff;
   writing-mode: vertical-lr;
   /* font-size: 24px; */ 
@@ -208,13 +208,35 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
   }
-  .footer-pages{width: 80%;}
+  .footer-pages{
+    width: 80%;
+  }
 
   .footer-follow,
   .footer-contact{
     width: 40%;
+    margin: 0;
   }
 }  
+@media screen and (min-width: 900px){
+  .footer-content{
+    justify-content: space-between;
+  }
+  .footer-pages{
+    width: 30%;
+    order:2;
+  }
+  
+  .footer-follow{
+    width: 20%;
+    order:1;
+  }
+  .footer-contact{
+    width: 20%;
+    order:3;
+  }
+}
+
 @media screen and (min-width: 1024px){
   .footer-bg{height: 670px;}
 }
